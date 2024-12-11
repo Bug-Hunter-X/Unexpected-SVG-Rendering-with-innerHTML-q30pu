@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug</title>
+</head>
+<body>
+  <div id="myDiv"></div>
+  <script>
+    // This is the buggy code
+    document.getElementById('myDiv').innerHTML = "<p>Some text</p><svg><circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="yellow"></svg>";
+  </script>
+</body>
+</html>
