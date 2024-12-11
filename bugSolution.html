@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug Solution</title>
+</head>
+<body>
+  <div id="myDiv"></div>
+  <script>
+    // Solution: Create SVG element using DOM manipulation
+    const svg = document.createElementNS("http://www.w3.org/2000/svg", 'svg');
+    const circle = document.createElementNS("http://www.w3.org/2000/svg", 'circle');
+    circle.setAttribute('cx', 50);
+    circle.setAttribute('cy', 50);
+    circle.setAttribute('r', 40);
+    circle.setAttribute('stroke', 'green');
+    circle.setAttribute('stroke-width', 4);
+    circle.setAttribute('fill', 'yellow');
+    svg.appendChild(circle);
+    document.getElementById('myDiv').appendChild(svg);
+  </script>
+</body>
+</html>
